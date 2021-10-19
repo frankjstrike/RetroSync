@@ -34,7 +34,7 @@ setupCrontab () {
                 echo "Invalid entry. Please select a value between 1 and 59 (Minutes) <1-59>"
                 read minutes
             done
-            (crontab -l ; echo "*/$minutes * * * * $PWD/RestroSync.sh $PiIP")| crontab - # Once user enters correct entry, it will append the cron job to the crontab
+            (crontab -l ; echo "*/$minutes * * * * $PWD/RetroSync.sh $PiIP")| crontab - # Once user enters correct entry, it will append the cron job to the crontab
             break
         elif [[ $cronResponse == "n" ]]; then # If user does not choose to create cron job
             break
